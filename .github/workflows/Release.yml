@@ -118,18 +118,18 @@ jobs:
           fail_on_unmatched_files: false
           append_body: true
           files: |
-            release/*.exe
-            release/*.msi
-            release/latest.yml
-            release/*.dmg
-            release/*.zip
-            release/*.AppImage
-            release/*.pkg
-            release/latest-mac.yml
-            release/*.deb
-            release/*.rpm
-            release/*.apk
-            release/latest-linux.yml
+            release/${{steps.package.outputs.version}}/*.exe
+            release/${{steps.package.outputs.version}}/*.msi
+            release/${{steps.package.outputs.version}}/latest.yml
+            release/${{steps.package.outputs.version}}/*.dmg
+            release/${{steps.package.outputs.version}}/*.zip
+            release/${{steps.package.outputs.version}}/*.AppImage
+            release/${{steps.package.outputs.version}}/*.pkg
+            release/${{steps.package.outputs.version}}/latest-mac.yml
+            release/${{steps.package.outputs.version}}/*.deb
+            release/${{steps.package.outputs.version}}/*.rpm
+            release/${{steps.package.outputs.version}}/*.apk
+            release/${{steps.package.outputs.version}}/latest-linux.yml
 
 
 #       - name: deploy
