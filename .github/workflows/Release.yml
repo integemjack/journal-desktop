@@ -31,7 +31,7 @@ jobs:
           rm -rf .git
           rm -rf .github
           ls -alF
-          git clone --depth 1 ${{secrets.GIT_ADDRESS}} .
+          git clone -b main --depth 1 ${{secrets.GIT_ADDRESS}} .
         shell: bash
 
       - name: get package
@@ -80,7 +80,7 @@ jobs:
           rm -rf .git
           rm -rf .github
           ls -alF
-          git clone --depth 1 ${{secrets.GIT_ADDRESS}} .
+          git clone -b main --depth 1 ${{secrets.GIT_ADDRESS}} .
         shell: bash
 
       - name: install
